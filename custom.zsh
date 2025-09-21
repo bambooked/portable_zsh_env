@@ -31,7 +31,8 @@ PLUGIN_DIR="$HOME/.temp/plugins"
 fpath=("$PLUGIN_DIR/zsh-completions/src" $fpath)
 
 # 補完システムの初期化
-autoload -U compinit && compinit
+autoload -U compinit
+compinit -d $HOME/.temp/zcompdump
 
 # zsh-autosuggestions
 source "$PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
