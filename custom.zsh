@@ -25,14 +25,14 @@ PROMPT="%F{green}[mentor]%f $PROMPT"
 ####################################################
 
 # プラグインのベースディレクトリ
-PLUGIN_DIR="$HOME/.temp/plugins"
+PLUGIN_DIR="${ZDOTDIR:-$HOME/.temp}/plugins"
 
 # zsh-completions (fpathに追加)
 fpath=("$PLUGIN_DIR/zsh-completions/src" $fpath)
 
 # 補完システムの初期化
 autoload -U compinit
-compinit -d $HOME/.temp/zcompdump
+compinit -d "${ZDOTDIR:-$HOME/.temp}/zcompdump"
 
 # zsh-autosuggestions
 source "$PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
@@ -65,7 +65,7 @@ setopt print_eight_bit        # 8bit文字を有効
 ####################################################
 
 # 履歴ファイルと容量
-HISTFILE="$HOME/.temp/zsh_history"
+HISTFILE="${ZDOTDIR:-$HOME/.temp}/zsh_history"
 
 HISTSIZE=10000
 SAVEHIST=100000
