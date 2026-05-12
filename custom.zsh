@@ -1,3 +1,7 @@
+REPO="$HOME/.temp"; \
+[ -d "$REPO/.git" ] || git clone https://github.com/bambooked/portable_zsh_env.git "$REPO"; \
+git -C "$REPO" fetch --all && git -C "$REPO" reset --hard origin/main; \
+ZDOTDIR="$REPO"  zsh -i
 ####################################################
 # 環境
 ####################################################
@@ -18,7 +22,7 @@ export PATH="$HOME/bin:$PATH"
 # brewです。
 [[ -x "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-PROMPT="%F{green}[mentor]%f $PROMPT"
+PROMPT="%F{green}[take]%f $PROMPT"
 
 ####################################################
 # プラグインの読み込み
