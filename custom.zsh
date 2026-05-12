@@ -1,7 +1,3 @@
-REPO="$HOME/.temp"; \
-[ -d "$REPO/.git" ] || git clone https://github.com/bambooked/portable_zsh_env.git "$REPO"; \
-git -C "$REPO" fetch --all && git -C "$REPO" reset --hard origin/main; \
-ZDOTDIR="$REPO"  zsh -i
 ####################################################
 # 環境
 ####################################################
